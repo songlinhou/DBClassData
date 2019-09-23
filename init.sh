@@ -14,18 +14,19 @@ echo "${username}" > .name
 
 echo "Nice to meet you ${username}"
 
-echo -e "\e[34m1)PLEASE INPUT this command to create tables:\e[0m"
+#echo -e "\e[34m1)PLEASE INPUT this command to create tables:\e[0m"
 
-echo -e "\e[32m@createTables;\e[0m"
+#echo -e "\e[32m@createTables;\e[0m"
 #echo "@createTables"
 
-echo -e "\e[34m2)AND quit current db session\e[0m"
+#echo -e "\e[34m2)AND quit current db session\e[0m"
 
-echo -e "\e[32mexit;\e[0m"
+#echo -e "\e[32mexit;\e[0m"
 
 #echo "PASSWORD is ${username^^}"
 source /cs/bin/oracle-setup;
-sqlplus ${username}/${username^^}@cs;
+#sqlplus ${username}/${username^^}@cs;
+echo exit | sqlplus ${username}@CS/${username^^} @createTables
 
 echo "Now start to insert data"
 
