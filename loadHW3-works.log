@@ -1,0 +1,55 @@
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Sun Sep 22 17:50:40 2019
+Version 18.5.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   loadHW3-works.ctl
+Data File:      Works.dat
+  Bad File:     Works.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table WORKS, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EID                                 FIRST     *   ,       CHARACTER            
+DID                                  NEXT     *   ,       CHARACTER            
+PCT_TIME                             NEXT     *   ,       CHARACTER            
+
+Record 62: Rejected - Error on table WORKS, column EID.
+Column not found before end of logical record (use TRAILING NULLCOLS)
+Record 1: Rejected - Error on table WORKS.
+ORA-02291: integrity constraint (SHOU.WORK_FK1) violated - parent key not found
+
+
+Table WORKS:
+  60 Rows successfully loaded.
+  2 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 193500 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            62
+Total logical records rejected:         2
+Total logical records discarded:        0
+
+Run began on Sun Sep 22 17:50:40 2019
+Run ended on Sun Sep 22 17:50:41 2019
+
+Elapsed time was:     00:00:00.26
+CPU time was:         00:00:00.03

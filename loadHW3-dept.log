@@ -1,0 +1,53 @@
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Sun Sep 22 17:50:30 2019
+Version 18.5.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   loadHW3-dept.ctl
+Data File:      Dept.dat
+  Bad File:     Dept.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table DEPT, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+DID                                 FIRST     *   ,       CHARACTER            
+DNAME                                NEXT     *   ,       CHARACTER            
+BUDGET                               NEXT     *   ,       CHARACTER            
+MANAGERID                            NEXT     *   ,       CHARACTER            
+
+Record 9: Rejected - Error on table DEPT, column DID.
+Column not found before end of logical record (use TRAILING NULLCOLS)
+
+Table DEPT:
+  8 Rows successfully loaded.
+  1 Row not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 258000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             9
+Total logical records rejected:         1
+Total logical records discarded:        0
+
+Run began on Sun Sep 22 17:50:30 2019
+Run ended on Sun Sep 22 17:50:30 2019
+
+Elapsed time was:     00:00:00.20
+CPU time was:         00:00:00.03
