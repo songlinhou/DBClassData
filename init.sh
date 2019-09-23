@@ -1,17 +1,25 @@
 #!/bin/bash
 
+username=""
+
 echo "Please input your username:"
 
 read username
 
+while [ -z "$username" ]; do
+	echo "please input your username:"
+        read username
+done
+echo "${username}" > .name
+
 echo "Nice to meet you ${username}"
 
-echo "1)PLEASE INPUT this command to create tables:"
+echo -e "\e[34m1)PLEASE INPUT this command to create tables:\e[0m"
 
 echo -e "\e[32m@createTables;\e[0m"
 #echo "@createTables"
 
-echo "2)AND quit current db session"
+echo -e "\e[34m2)AND quit current db session\e[0m"
 
 echo -e "\e[32mexit;\e[0m"
 
