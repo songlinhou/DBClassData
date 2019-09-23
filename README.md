@@ -12,6 +12,11 @@ $ cd DBClassData/
 $ chmod +x init.sh
 
 $ ./init.sh
+
+SQL> @createTables;
+
+SQL> exit;
+
 ```
 
 Quick Start.
